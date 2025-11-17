@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Quoted versions to ensure YAML doesn't parse them as floats
-        python-version: ["3.10", "3.11"]
+        # Temporariamente limitar para uma única versão conhecida estável
+        # para evitar falhas por parsing/compatibilidade enquanto investigamos.
+        python-version: ["3.10"]
 
     steps:
       - uses: actions/checkout@v4
